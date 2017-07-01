@@ -27,11 +27,11 @@
 
 /*============================ MACRO DEFINITIONS ============================*/
 /* Basic functions are defined as macros to save stack space */
-#define MotorDriverLeft(pwm , dir) {    switch (dir)  { case 1: analogWrite(motorL1, pwm);digitalWrite( motorR1, LOW );  break;  case 0: analogWrite(motorR1, pwm); digitalWrite( motorL1, LOW ); break;}}
-#define MotorDriverRight(pwm , dir){   switch (dir)  { case 1: analogWrite(motorL2, pwm); digitalWrite( motorR2, LOW ); break;  case 0: analogWrite(motorR2, pwm); digitalWrite( motorL2, LOW ); break;}}
+#define MotorDriverLeft(pwm , dir) {    switch (dir)  { case 1: analogWrite(motorL1, pwm);digitalWrite( motorR1, LOW );  break;  case -1: analogWrite(motorR1, pwm); digitalWrite( motorL1, LOW ); break;}}
+#define MotorDriverRight(pwm , dir){   switch (dir)  { case 1: analogWrite(motorL2, pwm); digitalWrite( motorR2, LOW ); break;  case -1: analogWrite(motorR2, pwm); digitalWrite( motorL2, LOW ); break;}}
 
-#define BreakMotorLeft() digitalWrite( motorL1, HIGH );  digitalWrite( motorR1, HIGH )
-#define BreakMotorRight() digitalWrite( motorL2, HIGH ); digitalWrite( motorR2, HIGH )
+#define BrakeMotorLeft() digitalWrite( motorL1, HIGH );  digitalWrite( motorR1, HIGH )
+#define BrakeMotorRight() digitalWrite( motorL2, HIGH ); digitalWrite( motorR2, HIGH )
 
 #define StopMotorLeft() digitalWrite( motorL1, LOW );  digitalWrite( motorR1, LOW )
 #define StopMotorRight() digitalWrite( motorL2, LOW ); digitalWrite( motorR2, LOW )

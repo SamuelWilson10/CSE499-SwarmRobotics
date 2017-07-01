@@ -31,7 +31,7 @@ void init_motor_driver() {
   pinMode(motorR1,OUTPUT);
   pinMode(motorL2,OUTPUT);
   pinMode(motorR2,OUTPUT);
-  BreakMotorLeft();
-  BreakMotorRight();
+  BrakeMotorLeft();
+  BrakeMotorRight();
 }
 /*========================= END OF motordriver.cpp ==========================*/
